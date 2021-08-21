@@ -38,6 +38,9 @@ module.exports = {
       borderRadius: {
         card: '10px'
       },
+      borderWidth: {
+        '1/2': '0.5px',
+      },
       fontFamily: {
         primary: ['Poppins', 'sans-serif']
       },

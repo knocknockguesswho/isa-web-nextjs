@@ -10,13 +10,13 @@ interface IProps {
 }
 const BlogArticleContent = (props: IProps) => {
   return (
-    <div className="space-y-10 px-10 desktop:px-18 phone:px-8">
+    <div className='space-y-10 px-10 desktop:px-18 phone:px-6'>
       {props.item.map((content: ArticleContent, contentIdx: number) => {
         return (
           <div key={contentIdx}>
-            {content.p && <Typography className="text-black text-xl">{content.p}</Typography>}
+            {content.p && <Typography className='text-black text-xl'>{content.p}</Typography>}
             {content.img && (
-              <div className="flex flex-col items-center justify-center space-y-4">
+              <div className='flex flex-col items-center justify-center space-y-4 w-auto'>
                 {content.img.map((item: ArticleContentImg, imgIdx: number) => {
                   return (
                     <Image
@@ -25,7 +25,7 @@ const BlogArticleContent = (props: IProps) => {
                       width={item.width}
                       height={item.height}
                       alt={props.title + ' ' + imgIdx}
-                      loading="lazy"
+                      loading='lazy'
                     />
                   );
                 })}

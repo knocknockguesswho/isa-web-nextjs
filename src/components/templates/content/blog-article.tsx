@@ -40,7 +40,7 @@ const BlogArticle = (props: IProps) => {
       <div className='w-full flex flex-col items-baseline'>
         {/* it's article container */}
         <div
-          className='w-full flex flex-col space-y-10 px-10 pb-30 desktop:px-18 phone:px-8'
+          className='w-full flex flex-col space-y-10 px-10 pb-30 desktop:px-18 phone:px-6 phone:pb-10'
           style={{ maxWidth: 1260 }}
         >
           {/* it's article header container */}
@@ -49,9 +49,9 @@ const BlogArticle = (props: IProps) => {
           </Typography>
           {props?.tabContent && <PageTab tabs={props?.tabContent} />}
         </div>
-        <div className='w-full flex flex-row items-center space-x-5 px-10 pb-7 desktop:px-18 phone:px-8'>
+        <div className='w-full flex flex-row phone:flex-col items-center phone:items-baseline space-x-5 phone:space-x-0 phone:space-y-1 px-10 pb-7 desktop:px-18 phone:px-6'>
           {/* it's body title container */}
-          <Typography className='text-black text-2xl' bold>
+          <Typography className='text-black text-2xl phone:text-xl' bold>
             {props?.articleBody.title}
           </Typography>
           <div className='flex flex-row space-x-1 items-center'>
