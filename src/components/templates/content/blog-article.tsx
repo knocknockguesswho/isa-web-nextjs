@@ -14,10 +14,16 @@ export type ArticleContentImg = {
   width: number | string;
   height: number | string;
 };
+export type ArticleContentCard = {
+  title: string;
+  content: string;
+};
 export type ArticleContent = {
   p?: string;
   img?: ArticleContentImg[];
   section?: string;
+  card?: ArticleContentCard[];
+  markedTitle?: boolean;
 };
 export type ArticleBody = {
   title: string;
@@ -33,8 +39,8 @@ interface IProps {
 const BlogArticle = (props: IProps) => {
   const router = useRouter();
   React.useEffect(() => {
-    if (props.tabContent) router.push(props?.tabContent[0].route);
-  }, []);
+    if (props.tabContent && !router.query) router.push(props?.tabContent[0].route);
+  }, [router.query]);
   return (
     <BodyContainer>
       <div className='w-full flex flex-col items-baseline'>
@@ -52,19 +58,19 @@ const BlogArticle = (props: IProps) => {
         <div className='w-full flex flex-row phone:flex-col items-center phone:items-baseline space-x-5 phone:space-x-0 phone:space-y-1 px-10 pb-7 desktop:px-18 phone:px-6'>
           {/* it's body title container */}
           <Typography className='text-black text-2xl phone:text-xl' bold>
-            {props?.articleBody.title}
+            {props?.articleBody?.title}
           </Typography>
           <div className='flex flex-row space-x-1 items-center'>
             {/* it's body title time to read container */}
             <Icon color='neutral' size='s' name='clock' />
             <Typography className='text-s text-neutral' italic>
-              {convertMsToMin(props?.articleBody.timeToRead)} min read
+              {convertMsToMin(props?.articleBody?.timeToRead)} min read
             </Typography>
           </div>
         </div>
         <div className='w-full flex flex-col space-y-10' style={{ maxWidth: 1000 }}>
           {/* it's body content container */}
-          <BlogArticleContent title={props?.articleBody.title} item={props?.articleBody.content} />
+          <BlogArticleContent title={props?.articleBody?.title} item={props?.articleBody?.content} />
         </div>
       </div>
     </BodyContainer>

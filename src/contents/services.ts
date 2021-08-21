@@ -58,6 +58,25 @@ export const servicesTaxServices: ArticleBody = {
     {
       p: 'Our professional is effectively integrated with Tax team to give you the perspective and support you need to manage your global tax burden effectively. Our network of practitioners has indepth knowledge of both direct and indirect state and local taxes and offers a broad array of services, including:',
     },
+    {
+      card: [
+        {
+          title: 'Employment Tax',
+          content:
+            'Our expert can assist with:\n\nPreparation, payment and submission of the employee’s annual income tax (form 1721) including preparation of the tax forms for each employee (1721A1)',
+        },
+        {
+          title: 'Corporate Income Tax',
+          content:
+            'We will give you the advice of calculation of corporate income tax at the end of tax period. And help you on preparing from (1770)',
+        },
+        {
+          title: 'Value Added Taxes',
+          content:
+            'We can fully support VAT compliance reports, identify the right partial exemption method and review accounting tax systems.  ',
+        },
+      ],
+    },
   ],
 };
 
@@ -70,6 +89,25 @@ export const servicesBusinessAdvisory: ArticleBody = {
     },
     {
       p: 'Our range of specialized advisory services in mission critical areas of corporate and business finance, include:',
+    },
+    {
+      card: [
+        {
+          title: 'Corporate Finance',
+          content:
+            'Our professionals provide merger and acquisition, and private equity advice from a base of deep industry knowledge. We have advised companies on the issue and listing of securities on the Indonesia equity markets. We have acted as financial advisors for companies raising funds or evaluating the complex financial implications of proposed transactions.',
+        },
+        {
+          title: 'Project Finance & Privatisation',
+          content:
+            'Our resources are recognised and respected in Indonesia. At the request by conglomerate group that we have provided resources to advise on privatisation of the Company and project financing.',
+        },
+        {
+          title: 'Corporate Value Consulting',
+          content:
+            "We have a team of professionals who work with our clients to maximise their corporation's value in today's rapidly changing  world. Our services include business valuations, due diligence investigations and the preparation of financial projections and budgets.",
+        },
+      ],
     },
   ],
 };
