@@ -15,17 +15,22 @@ const PageTab = (props: IProps) => {
   const router = useRouter();
   const routerQuery: ParsedUrlQuery = router.query;
   return (
-    <div className="w-full flex flex-row">
+    <div className='w-full border-t border-b border-l border-blue flex flex-row box-content'>
       {props.tabs.map((tab: PageSection, idx: number) => {
         const tabRoute: UrlObject = tab.route as UrlObject;
         return (
-          <div
-            className="flex flex-1 justify-center items-center"
-            key={idx}
-          >
+          <div className='flex flex-1 justify-center items-center border-r border-blue box-content' key={idx}>
             <Link href={tab.route}>
-              <a className={`w-full ${stringify(tabRoute.query as ParsedUrlQueryInput) === stringify(routerQuery) ? 'text-white bg-blue' : 'text-blue '}`}>
-                <Typography className="text-xl border border-blue w-full text-center py-4">{tab.name}</Typography>
+              <a
+                className={`w-full ${
+                  stringify(tabRoute.query as ParsedUrlQueryInput) === stringify(routerQuery)
+                    ? 'text-white bg-blue'
+                    : 'text-blue '
+                }`}
+              >
+                <Typography className='text-xl tablet:text-lg phone:text-xs w-full text-center py-4'>
+                  {tab.name}
+                </Typography>
               </a>
             </Link>
           </div>

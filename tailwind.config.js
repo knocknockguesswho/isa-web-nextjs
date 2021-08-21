@@ -26,6 +26,9 @@ module.exports = {
       height: {
         '50%': '50%',
       },
+      maxWidth: {
+        '450px': '450px'
+      },
       fontSize: {
         xs: '10px',
         s: '12px',
@@ -37,6 +40,9 @@ module.exports = {
       },
       borderRadius: {
         card: '10px'
+      },
+      borderWidth: {
+        '1/2': '0.5px',
       },
       fontFamily: {
         primary: ['Poppins', 'sans-serif']

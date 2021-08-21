@@ -40,7 +40,7 @@
       "error",
       "consistent"
     ],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", {"avoidEscape": true}],
     "comma-dangle": "off",
     "generator-star-spacing": ["error", {"before": false, "after": true}],
     "@typescript-eslint/no-unused-vars": ["error"],

@@ -71,6 +71,10 @@ export const pageList: IPageList = {
         name: 'Our Difference',
         route: { pathname: '/about', query: { section: 'our-difference' } },
       },
+      {
+        name: 'Why ISA?',
+        route: { pathname: '/about', query: { section: 'why-isa' } },
+      },
     ],
   },
   [PAGE_NAME.CAREERS]: {
