@@ -26,6 +26,9 @@ module.exports = {
       height: {
         '50%': '50%',
       },
+      maxWidth: {
+        '450px': '450px'
+      },
       fontSize: {
         xs: '10px',
         s: '12px',

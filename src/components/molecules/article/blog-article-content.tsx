@@ -15,7 +15,22 @@ const BlogArticleContent = (props: IProps) => {
       {props.item.map((content: ArticleContent, contentIdx: number) => {
         return (
           <div key={contentIdx}>
-            {content.p && <Typography className='text-black text-xl'>{content.p}</Typography>}
+            {content.subtitle && (
+              <Typography bold className='text-black text-2xl mb-6'>
+                {content.subtitle}
+              </Typography>
+            )}
+            {content.p && (
+              <div className='flex flex-col space-y-10'>
+                {content.p.map((item: string, pIdx: number) => {
+                  return (
+                    <Typography key={pIdx} className='text-black text-xl'>
+                      {item}
+                    </Typography>
+                  );
+                })}
+              </div>
+            )}
             {content.img && (
               <div className='flex flex-col items-center justify-center w-auto'>
                 {content.img.map((item: ArticleContentImg, imgIdx: number) => {

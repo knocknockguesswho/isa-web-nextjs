@@ -35,7 +35,7 @@ const Services = () => {
       <BlogArticle
         articleHeader='Building a better working world for our clients.'
         tabContent={pageList[PAGE_NAME.SERVICES].pageSection}
-        articleBody={blogPosts[(router.query.section as string) || BLOG_POSTS.ACCOUNTING_SERVICE]}
+        articleBody={[blogPosts[(router.query.section as string) || BLOG_POSTS.ACCOUNTING_SERVICE]]}
       />
     </>
   );

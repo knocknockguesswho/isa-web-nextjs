@@ -16,36 +16,26 @@ const NavigationBar = () => {
   return (
     <div className='sticky top-0 right-0 left-0 z-20'>
       <div className='w-full bg-white flex flex-row items-center justify-between h-15 px-10 transform duration-100 shadow-normal desktop:px-18 phone:px-8 phone:h-14'>
-        <Link
-          href='/'
-          scroll
-        >
+        <Link href='/' scroll>
           <a onClick={() => setIsPhoneNavActive(false)}>
-            <Icon
-              name='isa-logo'
-              size='2xl'
-            />
+            <Icon name='isa-logo' size='2xl' />
           </a>
         </Link>
-        <div className='phone:hidden'><NavigationTab tabs={pageMap(pageList)}/></div>
+        <div className='phone:hidden'>
+          <NavigationTab tabs={pageMap(pageList)} />
+        </div>
         <div
           className='desktop:hidden small-desktop:hidden tablet:hidden'
           onClick={() => setIsPhoneNavActive(!isPhoneNavActive)}
         >
-          <Icon
-            name={isPhoneNavActive ? 'close' : 'burger'}
-            size='m'
-          />
+          <Icon name={isPhoneNavActive ? 'close' : 'burger'} size='m' />
         </div>
       </div>
-      {isPhoneNavActive &&
+      {isPhoneNavActive && (
         <div className='desktop:hidden small-desktop:hidden tablet:hidden'>
-          <NavigationTab
-            tabs={pageMap(pageList)}
-            navClickCallback={(status: boolean) => setIsPhoneNavActive(status)}
-          />
+          <NavigationTab tabs={pageMap(pageList)} navClickCallback={(status: boolean) => setIsPhoneNavActive(status)} />
         </div>
-      }
+      )}
     </div>
   );
 };
