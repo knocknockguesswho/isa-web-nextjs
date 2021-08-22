@@ -8,7 +8,7 @@ interface IProps {
 
 const SEOHeader = (props: IProps) => {
   const seoData = pageList[props?.pageName] ? pageList[props?.pageName] : pageList[PAGE_NAME.DEFAULT];
-  const ogImage = 'http://localhost:3000' + getStatic('isa-og-image.png');
+  const ogImage = 'iradhi.com' + getStatic('isa-og-image.png');
   return (
     <Head>
       <title>{seoData.title}</title>
