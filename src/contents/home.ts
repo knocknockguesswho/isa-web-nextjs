@@ -49,7 +49,7 @@ export const cardArticleItems: CardArticleItems[] = [
     articleContent:
       'Our tailored Accounting services can help you build trust and confidence through transparency clarity and consistency.',
     articleButtonLabel: 'Read More Services',
-    articleButtonClick: { pathname: '/services', query: 'accounting-service' },
+    articleButtonClick: { pathname: '/services', query: { section: 'accounting-service' } },
   },
   {
     iconName: 'tax-services',
@@ -57,7 +57,7 @@ export const cardArticleItems: CardArticleItems[] = [
     articleContent:
       'Our professional is effectively integrated with Tax team to give you the perspective and support you need to manage your global tax burden effectively.',
     articleButtonLabel: 'Read More Services',
-    articleButtonClick: { pathname: '/services', query: 'tax-services' },
+    articleButtonClick: { pathname: '/services', query: { section: 'tax-services' } },
   },
   {
     iconName: 'business-advisory',
@@ -65,7 +65,7 @@ export const cardArticleItems: CardArticleItems[] = [
     articleContent:
       'ISA Advisory is continually seeking better ways of working as we collaborate with clients to help them solve their complex industry issues and capitalize on opportunities to grow, optimize and protect their businesses. ',
     articleButtonLabel: 'Read More Services',
-    articleButtonClick: { pathname: '/services', query: 'business-advisory' },
+    articleButtonClick: { pathname: '/services', query: { section: 'business-advisory' } },
   },
 ];
 
