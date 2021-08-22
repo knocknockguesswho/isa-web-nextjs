@@ -20,15 +20,8 @@ const ButtonRounded = (props: IProps) => {
     'w-auto h-auto p-3 flex flex-row items-center space-x-2 rounded-full cursor-pointer select-none',
   ].join(' ');
   return (
-    <button
-      onClick={props?.onClick}
-      className={className}
-    >
-      <Icon
-        name={props?.iconName}
-        size={props?.iconSize}
-        color={props?.iconColor}
-      />
+    <button onClick={props?.onClick} className={className} aria-label='Button Rounded'>
+      <Icon name={props?.iconName} size={props?.iconSize} color={props?.iconColor} />
     </button>
   );
 };
@@ -38,7 +31,7 @@ ButtonRounded.defaultProps = {
   iconSize: 'm',
   iconColor: 'darkBlue',
   buttonColor: 'white',
-  withBorder: false
+  withBorder: false,
 };
 
 export default ButtonRounded;
