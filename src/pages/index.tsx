@@ -7,16 +7,18 @@ const HomeBannerContainer = dynamic(() => import('Components/atoms/container/hom
 const Stamp = dynamic(() => import('Components/molecules/marker/stamp'), { ssr: false });
 const HomeContent = dynamic(() => import('Components/templates/content/home-content'), { ssr: false });
 const TextCarousel = dynamic(() => import('Components/organism/body/text-carousel'), { ssr: false });
+const Footer = dynamic(() => import('Components/organism/footer/footer'), { ssr: false });
 
 const Home = () => {
   return (
     <>
-      <SEOHeader pageName={PAGE_NAME.HOME}/>
+      <SEOHeader pageName={PAGE_NAME.HOME} />
       <HomeBannerContainer>
-        <TextCarousel items={heroBannerTextSlide}/>
-        <Stamp text='Committed Towards Solutions'/>
+        <TextCarousel items={heroBannerTextSlide} />
+        <Stamp text='Committed Towards Solutions' />
       </HomeBannerContainer>
       <HomeContent />
+      <Footer />
     </>
   );
 };
