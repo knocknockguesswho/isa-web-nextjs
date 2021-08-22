@@ -6,7 +6,8 @@ import { ArticleBody } from 'Components/templates/content/blog-article';
 import { useRouter } from 'next/router';
 import { UrlObject } from 'url';
 const SEOHeader = dynamic(() => import('Components/templates/meta/seo-header'), { ssr: false });
-const BlogArticle = dynamic(() => import('Components/templates/content/blog-article'), { ssr: false });
+const BlogArticle = dynamic(() => import('Components/templates/content/blog-article'));
+const Footer = dynamic(() => import('Components/organism/footer/footer'), { ssr: false });
 enum BLOG_POSTS {
   ACCOUNTING_SERVICE = 'accounting-service',
   TAX_SERVICES = 'tax-services',
@@ -37,6 +38,7 @@ const Services = () => {
         tabContent={pageList[PAGE_NAME.SERVICES].pageSection}
         articleBody={[blogPosts[(router.query.section as string) || BLOG_POSTS.ACCOUNTING_SERVICE]]}
       />
+      <Footer />
     </>
   );
 };
