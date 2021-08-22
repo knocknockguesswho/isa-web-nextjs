@@ -16,8 +16,8 @@ const NavigationBar = () => {
   return (
     <div className='sticky top-0 right-0 left-0 z-20'>
       <div className='w-full bg-white flex flex-row items-center justify-between h-15 px-10 transform duration-100 shadow-normal desktop:px-18 phone:px-8 phone:h-14'>
-        <Link href='/' scroll>
-          <a onClick={() => setIsPhoneNavActive(false)}>
+        <Link href='/' scroll as='/'>
+          <a onClick={() => setIsPhoneNavActive(false)} aria-label='Button Logo'>
             <Icon name='isa-logo' size='2xl' />
           </a>
         </Link>
