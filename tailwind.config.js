@@ -9,7 +9,7 @@ module.exports = {
         darkBlue: '#1E3273',
         blue: '#4488C1',
         grey: '#636474',
-        neutral: '#2D2F4475',
+        neutral: '#2D2F4490',
         mild: '#C4C4C4',
         black: '#14162E',
         overlay: '#22222225',

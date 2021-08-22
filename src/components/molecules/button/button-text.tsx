@@ -1,9 +1,9 @@
 import React from 'react';
 import Icon from 'Components/atoms/foundation/icon';
 import Typography from 'Components/atoms/foundation/typography';
-type ButtonTextType = 'primary' | 'secondary'
+type ButtonTextType = 'primary' | 'secondary';
 interface IProps {
-  type?: ButtonTextType
+  type?: ButtonTextType;
   children: string | React.ReactElement;
   withArrow?: boolean;
   className?: string;
@@ -15,17 +15,12 @@ const ButtonText = (props: IProps) => {
     <button
       onClick={props?.onClick}
       className='w-auto flex flex-row items-center space-x-2 cursor-pointer select-none'
+      aria-label='Button Text'
     >
       <Typography className={`${props.className} ${props?.type === 'primary' ? 'text-blue' : 'text-white'}`}>
         {props?.children}
       </Typography>
-      {props?.withArrow &&
-        <Icon
-          name='chevron-right'
-          size='xs'
-          color={props?.type === 'primary' ? 'blue' : 'white'}
-        />
-      }
+      {props?.withArrow && <Icon name='chevron-right' size='xs' color={props?.type === 'primary' ? 'blue' : 'white'} />}
     </button>
   );
 };
@@ -33,7 +28,7 @@ const ButtonText = (props: IProps) => {
 ButtonText.defaultProps = {
   type: 'primary',
   size: 'm',
-  withArrow: false
+  withArrow: false,
 };
 
 export default ButtonText;
