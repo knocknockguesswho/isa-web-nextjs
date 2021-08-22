@@ -4,8 +4,8 @@ import { PageSection } from 'Helpers/page-helper';
 import { useRouter } from 'next/router';
 import Icon from 'Components/atoms/foundation/icon';
 import { convertMsToMin } from 'Helpers/component-helper';
-const Typography = dynamic(() => import('Components/atoms/foundation/typography'), { ssr: false });
-const BodyContainer = dynamic(() => import('Components/atoms/container/body-container'), { ssr: false });
+const Typography = dynamic(() => import('Components/atoms/foundation/typography'));
+const BodyContainer = dynamic(() => import('Components/atoms/container/body-container'));
 const PageTab = dynamic(() => import('Components/molecules/tab/page-tab'));
 const BlogArticleContent = dynamic(() => import('Components/molecules/article/blog-article-content'));
 
