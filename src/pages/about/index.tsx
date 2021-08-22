@@ -4,6 +4,7 @@ import { aboutOurDifference, aboutOurHistory, aboutWhyIsa, aboutWorkPhilosophy }
 import { PAGE_NAME } from 'Helpers/page-helper';
 const SEOHeader = dynamic(() => import('Components/templates/meta/seo-header'), { ssr: false });
 const BlogArticle = dynamic(() => import('Components/templates/content/blog-article'), { ssr: false });
+const Footer = dynamic(() => import('Components/organism/footer/footer'), { ssr: false });
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
         articleHeader='About'
         articleBody={[aboutWorkPhilosophy, aboutOurHistory, aboutOurDifference, aboutWhyIsa]}
       />
+      <Footer />
     </>
   );
 };

@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import dynamic from 'next/dynamic';
 import 'Styles/index.css';
 import Head from 'next/head';
 import ButtonRounded from 'Components/molecules/button/button-rounded';
 import NavigationBar from 'Components/organism/header/navigation-bar';
 import { getStatic, PAGE_NAME, pageList } from 'Helpers/page-helper';
-const Footer = dynamic(() => import('Components/organism/footer/footer'), { ssr: false });
 
 function IradhiFrontend(props: any) {
   const { Component, pageProps } = props;
@@ -19,67 +17,29 @@ function IradhiFrontend(props: any) {
     <div className='min-h-screen flex flex-col'>
       <Head>
         <title>{pageList[PAGE_NAME.DEFAULT].title}</title>
-        <meta
-          name="description"
-          content={pageList[PAGE_NAME.DEFAULT].description}
-          key={'description'}
-        />
-        <meta
-          property="og:title"
-          content={pageList[PAGE_NAME.DEFAULT].title}
-          key={'ogtitle'}
-        />
-        <meta
-          property="og:type"
-          content={defaultMeta.ogtype}
-          key={'ogtype'}
-        />
-        <meta
-          property="og:url"
-          content={defaultMeta.ogurl}
-          key={'ogurl'}
-        />
-        <meta
-          property="og:image"
-          content={defaultMeta.ogimage}
-          key={'ogimage'}
-        />
+        <meta name='description' content={pageList[PAGE_NAME.DEFAULT].description} key={'description'} />
+        <meta property='og:title' content={pageList[PAGE_NAME.DEFAULT].title} key={'ogtitle'} />
+        <meta property='og:type' content={defaultMeta.ogtype} key={'ogtype'} />
+        <meta property='og:url' content={defaultMeta.ogurl} key={'ogurl'} />
+        <meta property='og:image' content={defaultMeta.ogimage} key={'ogimage'} />
+        <link href='https://fonts.googleapis.com' rel='preload' />
+        <link href='https://fonts.gstatic.com' crossOrigin='anonymous' rel='preload' />
         <link
-          href="https://fonts.googleapis.com"
-          rel='preload'
+          href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
+          rel='stylesheet'
         />
-        <link
-          href="https://fonts.gstatic.com"
-          crossOrigin='anonymous'
-          rel='preload'
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="icon"
-          href="/isa-logo.ico"
-        />
+        <link rel='icon' href='/isa-logo.ico' />
       </Head>
       <NavigationBar />
       <a
         className='fixed bottom-0 right-0 transform -translate-y-6 -translate-x-6 z-20'
         href='https://wa.me/6285883360420'
         target='_blank'
-        rel="noreferrer"
+        rel='noreferrer'
       >
-        <ButtonRounded
-          iconName='whatsapp'
-          buttonColor='blue'
-          iconColor='white'
-          iconSize='l'
-          withShadow
-          withBorder
-        />
+        <ButtonRounded iconName='whatsapp' buttonColor='blue' iconColor='white' iconSize='l' withShadow withBorder />
       </a>
-      <Component {...pageProps}/>
-      <Footer />
+      <Component {...pageProps} />
     </div>
   );
 }
