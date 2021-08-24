@@ -9,17 +9,17 @@ export const heroBannerTextSlide: TextCarouselItem[] = [
     title: 'Accounting Service',
     content:
       'Our tailored Accounting services can help you build trust and confidence through transparency clarity and consistency.',
-    buttonHref: { pathname: '/services', query: 'accounting-service' },
+    buttonHref: { pathname: '/services', query: { section: 'accounting-service' } },
   },
   {
     title: 'Tax Services',
     content: 'Our professional is effectively integrated with Tax team.',
-    buttonHref: { pathname: '/services', query: 'tax-services' },
+    buttonHref: { pathname: '/services', query: { section: 'tax-services' } },
   },
   {
     title: 'Business Advisory',
     content: 'ISA Advisory is continually seeking better ways of working.',
-    buttonHref: { pathname: '/services', query: 'business-advisory' },
+    buttonHref: { pathname: '/services', query: { section: 'business-advisory' } },
   },
 ];
 

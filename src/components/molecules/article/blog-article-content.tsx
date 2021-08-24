@@ -3,7 +3,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { ArticleContent, ArticleContentCard, ArticleContentImg } from 'Components/templates/content/blog-article';
 import CardArticleSection from 'Components/organism/body/card-article-section';
-const Typography = dynamic(() => import('Components/atoms/foundation/typography'), { ssr: false });
+const Typography = dynamic(() => import('Components/atoms/foundation/typography'));
 
 interface IProps {
   title?: string;
@@ -42,6 +42,7 @@ const BlogArticleContent = (props: IProps) => {
                         height={item.height}
                         alt={props.title + ' ' + imgIdx}
                         loading='lazy'
+                        className='bg-white'
                       />
                     </div>
                   );

@@ -12,26 +12,26 @@ interface IProps {
   onClick?: () => void;
 }
 
-const ButtonRounded = (props: IProps) => {
+const ButtonRounded = ({
+  iconName = 'chevron-right',
+  iconSize = 'm',
+  iconColor = 'darkBlue',
+  buttonColor = 'white',
+  withBorder = false,
+  withShadow = false,
+  onClick,
+}: IProps) => {
   const className = [
-    props?.withBorder ? 'border border-white' : '',
-    props?.buttonColor ? convertColor(props?.buttonColor as ColorPalette, 'bg') : '',
-    props?.withShadow ? 'shadow-heavy hover:shadow-hover' : '',
+    withBorder ? 'border border-white' : '',
+    buttonColor ? convertColor(buttonColor as ColorPalette, 'bg') : '',
+    withShadow ? 'shadow-heavy hover:shadow-hover' : '',
     'w-auto h-auto p-3 flex flex-row items-center space-x-2 rounded-full cursor-pointer select-none',
   ].join(' ');
   return (
-    <button onClick={props?.onClick} className={className} aria-label='Button Rounded'>
-      <Icon name={props?.iconName} size={props?.iconSize} color={props?.iconColor} />
+    <button onClick={onClick} className={className} aria-label='Button Rounded'>
+      <Icon name={iconName} size={iconSize} color={iconColor} />
     </button>
   );
-};
-
-ButtonRounded.defaultProps = {
-  iconName: 'chevron-right',
-  iconSize: 'm',
-  iconColor: 'darkBlue',
-  buttonColor: 'white',
-  withBorder: false,
 };
 
 export default ButtonRounded;
