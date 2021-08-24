@@ -2,9 +2,11 @@
 import React from 'react';
 import 'Styles/index.css';
 import Head from 'next/head';
-import ButtonRounded from 'Components/molecules/button/button-rounded';
-import NavigationBar from 'Components/organism/header/navigation-bar';
 import { getStatic, PAGE_NAME, pageList } from 'Helpers/page-helper';
+import dynamic from 'next/dynamic';
+
+const ButtonRounded = dynamic(() => import('Components/molecules/button/button-rounded'));
+const NavigationBar = dynamic(() => import('Components/organism/header/navigation-bar'));
 
 function IradhiFrontend(props: any) {
   const { Component, pageProps } = props;
@@ -22,8 +24,8 @@ function IradhiFrontend(props: any) {
         <meta property='og:type' content={defaultMeta.ogtype} key={'ogtype'} />
         <meta property='og:url' content={defaultMeta.ogurl} key={'ogurl'} />
         <meta property='og:image' content={defaultMeta.ogimage} key={'ogimage'} />
-        <link href='https://fonts.googleapis.com' rel='preload' />
-        <link href='https://fonts.gstatic.com' crossOrigin='anonymous' rel='preload' />
+        <link href='https://fonts.googleapis.com' />
+        <link href='https://fonts.gstatic.com' crossOrigin='anonymous' />
         <link
           href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
           rel='stylesheet'
