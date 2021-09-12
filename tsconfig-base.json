@@ -31,6 +31,7 @@
       "Static/*": ["./public/static/*"],
       "Styles/*": ["./styles/*"],
       "Assets/*": ["./assets/*"],
+      "Utils/*": ["./utils/*"],
       "./../../../*": ["../*"]
     }
   },

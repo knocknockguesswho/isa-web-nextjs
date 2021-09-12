@@ -1,19 +1,20 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import 'Styles/index.css';
 import Head from 'next/head';
-import { getStatic, PAGE_NAME, pageList } from 'Helpers/page-helper';
 import dynamic from 'next/dynamic';
+import { getStatic, PAGE_NAME, pageList } from 'Helpers/page-helper';
+import 'Styles/index.css';
 
 const ButtonRounded = dynamic(() => import('Components/molecules/button/button-rounded'));
 const NavigationBar = dynamic(() => import('Components/organism/header/navigation-bar'));
 
 function IradhiFrontend(props: any) {
   const { Component, pageProps } = props;
+  const hostname: string = process.browser ? (window.location.hostname as string) : '';
   const defaultMeta = {
     ogtype: 'website',
-    ogurl: 'iradhi.com',
-    ogimage: 'iradhi.com' + getStatic('isa-og-image'),
+    ogurl: hostname,
+    ogimage: hostname + getStatic('isa-og-image.png'),
   };
   return (
     <div className='min-h-screen flex flex-col'>

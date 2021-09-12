@@ -1,11 +1,11 @@
 import React from 'react';
+import SEOHeader from 'Components/templates/meta/seo-header';
 import dynamic from 'next/dynamic';
 import { pageList, PageSection, PAGE_NAME } from 'Helpers/page-helper';
 import { servicesAccountingService, servicesBusinessAdvisory, servicesTaxServices } from 'contents/services';
 import { ArticleBody } from 'Components/templates/content/blog-article';
 import { useRouter } from 'next/router';
 import { UrlObject } from 'url';
-const SEOHeader = dynamic(() => import('Components/templates/meta/seo-header'));
 const BlogArticle = dynamic(() => import('Components/templates/content/blog-article'));
 const Footer = dynamic(() => import('Components/organism/footer/footer'), { ssr: false });
 enum BLOG_POSTS {
