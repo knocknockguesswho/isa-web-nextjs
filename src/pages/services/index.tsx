@@ -28,7 +28,7 @@ const Services = () => {
   //   if (router.query.section)
   // }, [router]);
   React.useEffect(() => {
-    if (!router.query.section) router.push(pageSection[0].route as UrlObject);
+    if (!router.query.section) router.replace(pageSection[0].route as UrlObject);
   }, [router.query]);
   return (
     <>
