@@ -87,7 +87,7 @@
       },
       {
         "selector": "interface",
-        "format": ["StrictPascalCase"],
+        "format": ["PascalCase"],
         "prefix": ["I"]
       },
       {

@@ -1,8 +1,8 @@
 import React from 'react';
+import SEOHeader from 'Components/templates/meta/seo-header';
 import dynamic from 'next/dynamic';
 import { PAGE_NAME } from 'Helpers/page-helper';
 import { heroBannerTextSlide } from 'contents/home';
-const SEOHeader = dynamic(() => import('Components/templates/meta/seo-header'));
 const HomeBannerContainer = dynamic(() => import('Components/atoms/container/home-banner-container'));
 const Stamp = dynamic(() => import('Components/molecules/marker/stamp'));
 const HomeContent = dynamic(() => import('Components/templates/content/home-content'));
