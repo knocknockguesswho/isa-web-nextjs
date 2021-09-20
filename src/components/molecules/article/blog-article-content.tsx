@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import { ArticleContent, ArticleContentCard, ArticleContentImg } from 'Components/templates/content/blog-article';
+import Typography from 'Components/atoms/foundation/typography';
 import CardArticleSection from 'Components/organism/body/card-article-section';
-const Typography = dynamic(() => import('Components/atoms/foundation/typography'));
+import { ArticleContent, ArticleContentCard, ArticleContentImg } from 'Components/templates/content/blog-article';
 
 interface IProps {
   title?: string;
