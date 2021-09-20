@@ -23,7 +23,7 @@ function IradhiFrontend(props: any) {
         <meta property='og:title' content={pageList[PAGE_NAME.DEFAULT].title} key={'ogtitle'} />
         <meta property='og:type' content={defaultMeta.ogtype} key={'ogtype'} />
         <meta property='og:url' content={defaultMeta.ogurl} key={'ogurl'} />
-        <meta property='og:image' content={defaultMeta.ogimage} key={'ogimage'} />
+        <meta property='og:image' content={defaultMeta.ogimage} itemProp='image' key={'ogimage'} />
         <link href='https://fonts.googleapis.com' />
         <link href='https://fonts.gstatic.com' crossOrigin='anonymous' />
         <link
