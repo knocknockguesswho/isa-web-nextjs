@@ -11,7 +11,7 @@ export enum PAGE_NAME {
   CAREERS = 'Careers',
   DEFAULT = 'default',
 }
-export type PageSection = { name: string; route: Url | UrlObject | string };
+export type PageSection = { name: string; route: Url | UrlObject | string; id?: string };
 export interface IPageList {
   [args: string]: {
     title: string;
@@ -61,19 +61,22 @@ export const pageList: IPageList = {
     pageSection: [
       {
         name: 'Work Philosophy',
-        route: { pathname: '/about', query: { section: 'work-philosophy' } },
+        route: { pathname: '/about' },
       },
       {
-        name: 'History',
-        route: { pathname: '/about', query: { section: 'history' } },
+        name: 'Our History',
+        route: '/about#our-history',
+        id: 'history',
       },
       {
         name: 'Our Difference',
-        route: { pathname: '/about', query: { section: 'our-difference' } },
+        route: '/about#our-difference',
+        id: 'our-difference',
       },
       {
         name: 'Why ISA?',
-        route: { pathname: '/about', query: { section: 'why-isa' } },
+        route: '/about#why-isa?',
+        id: 'why-isa?',
       },
     ],
   },

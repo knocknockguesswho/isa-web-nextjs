@@ -10,11 +10,10 @@ const NavigationBar = dynamic(() => import('Components/organism/header/navigatio
 
 function IradhiFrontend(props: any) {
   const { Component, pageProps } = props;
-  const hostname: string = process.browser ? (window.location.hostname as string) : '';
   const defaultMeta = {
     ogtype: 'website',
-    ogurl: hostname,
-    ogimage: hostname + getStatic('isa-og-image.png'),
+    ogurl: 'https://iradhi.com',
+    ogimage: 'https://iradhi.com' + '' + getStatic('isa-og-image.png'),
   };
   return (
     <div className='min-h-screen flex flex-col'>

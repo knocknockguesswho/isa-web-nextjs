@@ -1,14 +1,13 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { PageSection } from 'Helpers/page-helper';
 import { useRouter } from 'next/router';
 import Icon from 'Components/atoms/foundation/icon';
 import { convertMsToMin } from 'Helpers/component-helper';
-const Typography = dynamic(() => import('Components/atoms/foundation/typography'));
-const BodyContainer = dynamic(() => import('Components/atoms/container/body-container'));
-const PageTab = dynamic(() => import('Components/molecules/tab/page-tab'));
-const BlogArticleContent = dynamic(() => import('Components/molecules/article/blog-article-content'));
+import BodyContainer from 'Components/atoms/container/body-container';
+import Typography from 'Components/atoms/foundation/typography';
+import PageTab from 'Components/molecules/tab/page-tab';
+import BlogArticleContent from 'Components/molecules/article/blog-article-content';
 
 export type ArticleContentImg = {
   src: string;
@@ -39,6 +38,10 @@ interface IProps {
 const BlogArticle = (props: IProps) => {
   const router = useRouter();
   React.useEffect(() => {
+    const routerHash: string = router?.asPath?.split('#')[1];
+    if (routerHash) {
+      document.getElementById(routerHash)?.scrollIntoView();
+    }
     if (props.tabContent && !router.query) router.push(props?.tabContent[0].route);
   }, [router.query]);
   return (
