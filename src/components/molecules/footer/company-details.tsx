@@ -36,7 +36,7 @@ CompanyDetails.defaultProps = {
       <br />
       Centennial Tower Lt. 35
       <br />
-      l. Gatot Subroto, RT.2/RW.2, Karet Semanggi, Setiabudi, Jakarta Selatan,
+      Jl. Gatot Subroto, RT.2/RW.2, Karet Semanggi, Setiabudi, Jakarta Selatan,
       <br />
       Daerah Khusus Ibukota Jakarta 12930
     </>
